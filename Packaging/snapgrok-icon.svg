@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Snapgrok</title>
+  <desc id="desc">A dark rounded square with a white crop mark, inset to the macOS icon grid.</desc>
+  <g transform="translate(100 100) scale(0.8046875)">
+    <rect width="1024" height="1024" rx="224" fill="#111113"/>
+    <g fill="none" stroke="#F5F5F4" stroke-width="72" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M300 470 V340 H470"/>
+      <path d="M724 470 V340 H554"/>
+      <path d="M300 554 V684 H470"/>
+      <path d="M724 554 V684 H554"/>
+    </g>
+  </g>
+</svg>
