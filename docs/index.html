@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snapgrok — the tab, staged, unsent</title>
+  <meta name="description" content="A Mac menu-bar shortcut. Option-Shift-G grabs the front Chrome tab and drops the screenshot and link into a Grok Bot. You still press Return.">
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="#top">
+      <img src="mark.svg" width="22" height="22" alt="">
+      Snapgrok
+    </a>
+    <p class="bar-note">Mac menu bar · Chrome · Grok Bot</p>
+    <a class="bar-link" href="https://github.com/sbaluja10/snapgrok">Source</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">⌥⇧G</p>
+        <h1>The tab, staged. The send, still yours.</h1>
+        <p class="lede">Snapgrok sits in the menu bar. Chrome is in front, you press the shortcut, and a Grok Bot opens with a picture of the window and a short link to that exact page. Return is left for you.</p>
+        <div class="hero-actions">
+          <button class="snap-keys" type="button" id="snap">
+            <kbd>⌥</kbd><kbd>⇧</kbd><kbd>G</kbd>
+            <span>Snap this page</span>
+          </button>
+          <a class="text-link" href="https://github.com/sbaluja10/snapgrok#first-run">How to run it</a>
+        </div>
+      </div>
+
+      <div class="stage" id="stage" aria-live="polite">
+        <div class="desk">
+          <article class="chrome" id="chrome">
+            <div class="chrome-top">
+              <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="url">example.com/fitted-sheet?attempt=4</span>
+            </div>
+            <div class="page">
+              <p class="kicker">Attempt 04</p>
+              <h2>How to fold a fitted sheet</h2>
+              <p>The corners are not corners. They are opinions. You line one up, the opposite one leaves.</p>
+              <div class="sheet" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <svg class="crops" viewBox="0 0 100 100" aria-hidden="true">
+              <path d="M8 38 V14 H32"/>
+              <path d="M92 38 V14 H68"/>
+              <path d="M8 62 V86 H32"/>
+              <path d="M92 62 V86 H68"/>
+            </svg>
+          </article>
+
+          <aside class="composer" id="composer">
+            <p class="composer-label">Grok Bot · unsent</p>
+            <div class="thumb" aria-hidden="true">
+              <p>Attempt 04</p>
+              <strong>Fitted sheet</strong>
+            </div>
+            <p class="typed" id="typed"></p>
+            <button class="send" type="button" id="send">Send</button>
+          </aside>
+        </div>
+        <p class="stage-status" id="status">The page is just sitting there. Snap it.</p>
+      </div>
+    </section>
+
+    <section class="beats">
+      <article>
+        <span>01</span>
+        <h3>The window</h3>
+        <p>The front Chrome window, not the whole desktop. The cursor stays out of the picture.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>The real address</h3>
+        <p>A short link that still opens the page you were on, query string and all. If shortening fails, the full URL goes in.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Your Return key</h3>
+        <p>The bot you picked last is where it lands. Snapgrok stops at the composer.</p>
+      </article>
+    </section>
+
+    <section class="fine">
+      <div>
+        <h2>On your Mac</h2>
+        <p>macOS 14, Google Chrome, and the Grok Bot app. Sign in from the menu bar with the account you already use for Grok Bot, allow Screen &amp; System Audio Recording and Accessibility, then quit and reopen so those grants stick.</p>
+      </div>
+      <ol>
+        <li>Click Snapgrok and pick a bot. It stays picked.</li>
+        <li>Put Chrome in front.</li>
+        <li>Press ⌥⇧G.</li>
+        <li>Read it. Send it, or don’t.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <img src="mark.svg" width="28" height="28" alt="">
+    <p>Version 0.1.0 · <a href="https://github.com/sbaluja10/snapgrok">sbaluja10/snapgrok</a></p>
+  </footer>
+  <script src="site.js"></script>
+</body>
+</html>
